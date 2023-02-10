@@ -1,8 +1,11 @@
-# Quant cache tag purger
+# Quant tag observer
 
-Adds a cache tag plugin which listen to invalidation events to queue Quant repopulation. This allows node_saves to update the main page but also trigger updates for pages that might be affected by the content update (eg. views pages). These will be added to the queue for the next core cron run to publish the updates.
+Provides a traffic registry utility that tracks cache tags per URL in a table. This module is a companion module to other Quant modules and provides a core API for understanding what pages to rebuild during static generation processes.
 
-## Requirements
+## Installation
 
-  - quant
-  - purge
+For composer managed projects:
+
+```
+composer require quantcdn/quant_tag_observer
+```
