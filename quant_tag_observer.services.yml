@@ -1,0 +1,13 @@
+services:
+  quant_tag_observer.registry:
+    class: Drupal\quant_tag_observer\TrafficRegistry
+    arguments:
+      - '@database'
+  http_middleware.quant_tag_observer_url_registrar:
+    class: Drupal\quant_tag_observer\StackMiddleware\UrlRegistrar
+    arguments:
+      - '@quant_tag_observer.registry'
+      - '@config.factory'
+      - '@router.admin_context'
+    tags:
+      - { name: http_middleware, priority: 250 }

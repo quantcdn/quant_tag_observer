@@ -1,0 +1,4 @@
+quant_tag_observer.config:
+  route_name: quant_tag_observer.config
+  title: 'Configure tag observer'
+  base_route: quant.config

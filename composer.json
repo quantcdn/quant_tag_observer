@@ -1,0 +1,11 @@
+{
+    "name": "quantcdn/quant_tag_observer",
+    "description": "Tracks tags per URL in a table for static processing",
+    "type": "drupal-module",
+    "authors": [
+        {
+            "name": "Steve Worley",
+            "role": "Maintainer"
+        }
+    ]
+}

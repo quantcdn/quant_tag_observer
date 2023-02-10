@@ -1,0 +1,7 @@
+name: Quant Tag Observer
+description: Track cache tags per URL for other Quant intergations
+package: Quant
+
+type: module
+core_version_requirement: ^8 || ^9
+core: 8.x

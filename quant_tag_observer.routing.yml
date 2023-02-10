@@ -1,0 +1,7 @@
+quant_tag_observer.config:
+  path: '/admin/config/quant/tag_observer'
+  defaults:
+    _form: 'Drupal\quant_tag_observer\Form\ConfigurationForm'
+    _title: 'Quant tag observer configuration'
+  requirements:
+    _permission: 'configure quant tag observer'

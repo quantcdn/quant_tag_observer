@@ -1,0 +1,4 @@
+tag_blocklist:
+  - 'render'
+path_blocklist: []
+track_admin_routes: false

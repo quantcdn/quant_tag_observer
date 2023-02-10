@@ -1,0 +1,40 @@
+<?php
+
+/**
+ * @file
+ * Install the quant cache tags purger.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function quant_tag_observer_schema() {
+  $schema['quant_observed_tags'] = [
+    'description' => 'URLs that belong to specific cache tags',
+    'fields' => [
+      'urlid' => [
+        'description' => 'URL ID',
+        'type' => 'serial',
+        'not null' => TRUE,
+      ],
+      'url' => [
+        'description' => 'The fully qualified URL',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'tags' => [
+        'description' => 'Space-separated list of cache tag IDs for this entry',
+        'type' => 'text',
+        'size' => 'big',
+        'not null' => FALSE,
+      ],
+    ],
+    'primary key' => ['urlid'],
+  ];
+  return $schema;
+}
+
+function quant_tag_observer_uninstall() {
+  \Drupal::configFactory()->getEditable('quant_tag_observer.settings')->delete();
+}

@@ -1,0 +1,6 @@
+quant_tag_observer.config:
+  title: 'Quant tag observer'
+  route_name: quant_tag_observer.config
+  description: 'Configuration for the Quant tag observer'
+  parent: quant
+  weight: 1
